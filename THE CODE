@@ -1,0 +1,60 @@
+#include <iostream>
+#define N 9
+using namespace std;
+
+void matrix(int x, int y, int z, int grid[9][9])
+{
+
+    grid[x][y] = z;
+
+}
+int main()
+{
+ int n;
+ int grid[N][N] = {
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0, 0, 0, 0}};
+
+   int x,y,z,i;
+while(1)
+    {
+
+   cout<<"impot your number pleas : ";
+    cin>>z;
+    if(1>z||z>9)
+    {
+        cout<<endl;
+        cout<<"your number is not suitable for playing pleas enter an appropriate number "<<endl;
+        cout<<endl<<endl;
+        continue;
+    }
+    cout<<"impot the raw: ";
+    cin>>x;
+    cout<<"impot the column: ";
+    cin>>y;
+    x=x-1;
+    y=y-1;
+int value,c;
+    matrix(x,y,z,grid);
+
+    for(int i=0;i<9;i++)
+        {
+            for(int j=0;j<9;j++)
+                {
+                    cout<<grid[i][j];
+                    cout<<"   ";
+                }
+            cout<<endl;
+        }
+
+
+
+}
+}
